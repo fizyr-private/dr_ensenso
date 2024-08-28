@@ -16,6 +16,9 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Ensenso REQUIRED)
 find_package(Boost REQUIRED COMPONENTS filesystem date_time chrono)
 find_package(Eigen3 REQUIRED)
+# This VTK component is required by OpenCV, they should search for this target..
+# Some more information: https://gitlab.kitware.com/cmake/cmake/-/issues/24210
+find_package(VTK REQUIRED COMPONENTS jsoncpp)
 find_package(OpenCV REQUIRED)
 find_package(jsoncpp REQUIRED)
 find_package(fmt REQUIRED)
